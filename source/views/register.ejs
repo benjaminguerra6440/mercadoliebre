@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./include/head.ejs") %> 
+</head>
+<body>
+    <%- include("./include/header.ejs") %> 
+    <main>
+       <form action="/" method="post" class="form-register">
+        <fieldset class="fieldset-register">
+                <label>Nombre y Apellido</label>
+                <input type="text" name="nombre" id="nombre" class="input-text" minlength="2" required>
+        </fieldset>
+        <fieldset class="fieldset-register">
+                <label>Nombre de usuario</label>
+                <input type="text" name="usuario" id="usuario" class="input-text" minlength="2" required>
+        </fieldset>
+        <fieldset class="fieldset-register">
+                <label>E-mail</label>
+                <input type="email" name="email" id="email"  class="input-text" minlength="2" required>
+        </fieldset>
+        <fieldset class="fieldset-register">
+                <label>Fecha de nacimiento</label>
+                <input class="fecha-nacimiento" type="date" name="fecha" id="fecha"  class="input-text" minlength="2" required>
+        </fieldset>
+        <fieldset class="fieldset-register">
+                 <label>Perfil de usuario</label>
+                <fieldset class="fieldset-register">
+                        <input class="input-radio" type="radio" name="perfil" id="perfil" required >Comprador
+                </fieldset>
+                <fieldset class="fieldset-register">
+                        <input class="input-radio" type="radio" name="perfil" id="perfil" required >Vendedor
+                </fieldset>
+        </fieldset>
+        <fieldset class="fieldset-register">
+            <label>Intereses</label>
+                <fieldset class="fieldset-checkbox">
+                    <input type="checkbox" name="interes" value="Electro" class="input-checkbox">Electro
+                </fieldset>
+                <fieldset class="fieldset-checkbox">
+                    <input type="checkbox" name="interes" value="Moda" class="input-checkbox">Moda
+                </fieldset>
+                <fieldset class="fieldset-checkbox">
+                    <input type="checkbox" name="interes" value="Hogar" class="input-checkbox">Hogar
+                </fieldset>
+                <fieldset class="fieldset-checkbox">
+                    <input type="checkbox" name="interes" value="Jugueteria" class="input-checkbox">Juguetería
+                </fieldset>
+                <fieldset class="fieldset-checkbox">
+                    <input type="checkbox" name="interes" value="VidaSana" class="input-checkbox">Vida sana
+                </fieldset>
+        </fieldset>
+            <fieldset class="fieldset-register">
+                <label>Foto de usuario</label>
+                <input class="file-user" type="file" name="imagenUsuario" id="imagenUsuario">
+            </fieldset>
+            <fieldset class="fieldset-register">
+                <label>Contraseña</label>
+                <input type="password" name="password" id="password" class="input-text" required>
+            </fieldset>
+            <fieldset class="fieldset-register">
+                <label>Confirmar contraseña</label>
+                <input type="password" name="password" id="confirm-password" class="input-text" required>
+            </fieldset>
+            <fieldset class="buttom-register">
+                <button>Enviar</button>
+            </fieldset>
+            <fieldset class="buttom-register">
+                <button type="reset">Borrar</button>
+            </fieldset>
+       </fieldset>
+       </form>
+    </main>
+    <section class="footer-section">
+    <%- include("./include/footer.ejs") %>
+</section>
+</body>
+</html>

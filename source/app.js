@@ -1,0 +1,10 @@
+const express = require('express');
+const app = express();
+const {resolve} = require('path');
+const {port, start} = require("./modules/port");
+app.listen(port, start);
+app.set("views", resolve(__dirname, 'views'));
+app.set("view engine", "ejs");
+app.use(require("./modules/public"));
+app.use(require("./router/main.routes"));
+app.use(require("./router/users.routes"));
